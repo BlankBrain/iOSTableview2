@@ -14,13 +14,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tIy-6w-Wm4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="318"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="B5V-WX-Plx">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B5V-WX-Plx" id="wic-sL-x7Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="tbF-9p-yYO"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3z4-3I-ckB"/>
+                                </connections>
+                            </tableView>
+                            <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oB1-W1-5mf">
+                                <rect key="frame" x="0.0" y="372" width="414" height="490"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="130" id="AxJ-ew-xFc">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="130"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AxJ-ew-xFc" id="G2H-8i-YtY">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="cro-ZJ-cdE"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="e8s-0P-gdN"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tIy-6w-Wm4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4kT-UQ-Khh"/>
+                            <constraint firstItem="oB1-W1-5mf" firstAttribute="top" secondItem="tIy-6w-Wm4" secondAttribute="bottom" constant="10" id="GyE-03-laq"/>
+                            <constraint firstItem="tIy-6w-Wm4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IGm-mI-Paq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oB1-W1-5mf" secondAttribute="bottom" id="OL5-Xn-usX"/>
+                            <constraint firstItem="oB1-W1-5mf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TR5-js-Q8a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oB1-W1-5mf" secondAttribute="trailing" id="g0L-NG-3Ur"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tIy-6w-Wm4" secondAttribute="bottom" constant="500" id="juF-gR-Upw"/>
+                            <constraint firstItem="tIy-6w-Wm4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wx2-z5-G1i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="table1" destination="tIy-6w-Wm4" id="Bxg-yf-8dX"/>
+                        <outlet property="table2" destination="oB1-W1-5mf" id="Oke-TL-XDL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
         </scene>
     </scenes>
 </document>
